@@ -1,0 +1,33 @@
+#include <iostream>
+#include "yeha.h"
+int main()
+{
+	Sales_item items, newItem;
+
+	std::cout << "Enter an item" << std::endl;
+	int count = 1;
+
+	if (!(std::cin >> items)) 
+	{
+
+		std::cerr << "Invalid data." << std::endl;
+		return -1;
+	}
+	else
+	{
+		while (std::cin >> newItem)
+		{
+			if (items.isbn() == newItem.isbn()) 
+			{
+				++count;
+			}
+			else 
+			{
+				std::cerr << "Invalid data." << std::endl;
+				return -1;
+			}
+		}
+	}
+	std::cout << items.isbn() << " : " << count << " transactions with that isbn occured" << std::endl;
+	return 0;
+}
