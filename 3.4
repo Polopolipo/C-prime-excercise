@@ -1,0 +1,38 @@
+// program taking two strings from user, then comparing them by length and size
+// NOTE : length -> number of characters
+#include <iostream>
+#include <string>
+
+int main(void) {
+	using std::string; using std::cout; 
+	using std::cin; using std::endl;
+	
+	string s1;
+	string s2;
+	auto s1Len = s1.size();
+	auto s2Len = s2.size();
+
+	// get user input
+	getline(cin, s1);
+	getline(cin, s2);
+
+	if (s1 > s2) {
+		if (s1Len > s2Len) {
+			cout << "s1 is bigger and longer than s2" << endl;
+		}
+		else {
+			cout << "s1 is bigger than s2, but s2 is longer" << endl;
+		}
+	}
+	else if (s2 > s1){
+		if (s1Len > s2Len) {
+			cout << "s2 is bigger and longer than s1" << endl;
+		}
+		else {
+			cout << "s2 is bigger than s1, but s1 is longer" << endl;
+		}
+	}
+	else {
+		cout << "s2 is equal to s1" << endl;
+	}
+}
