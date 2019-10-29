@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+int main(void) {
+	using std::string;
+	using std::cout;
+	using std::cin;
+	using std::endl;
+	
+	string line;
+	while (cin >> line) {
+		cout << line << endl;
+		if (line == "HE") {
+			break;
+		}
+	}
+}
