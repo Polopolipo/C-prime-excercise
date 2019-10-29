@@ -1,0 +1,18 @@
+
+#include <iostream>
+#include <string>
+
+int main(void) {
+	using std::string; using std::cout; 
+	using std::cin; using std::endl;
+	
+	string s1;
+	string s2;
+	string s3;
+
+	getline(cin, s1);
+	getline(cin, s2);
+	
+	s3 = s1 + s2;
+	cout << s3 << endl;
+}
