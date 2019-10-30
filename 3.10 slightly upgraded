@@ -1,0 +1,44 @@
+// removes punctuation.
+// h!@ola! you --> hola you
+#include <iostream>
+#include <string>
+int main()
+{
+	using std::string; using std::cin;
+	using std::endl; using std::cout;
+	
+	string str;
+	getline(cin, str);
+	if (str.empty()) {
+		return 0;
+	}
+	auto length = str.size(); // will become the length after removing punctuation, if present.
+	auto LENGTH = str.size(); // length of str
+	// find the length of the string after removing all the punctuation characters
+	for (auto c: str)
+		if (ispunct(c)) {
+			length -= 1;
+		}
+
+	// If we found punctuation character(s)
+	if (length != LENGTH) {
+		// creating a dummy string
+		string strSimpler(length, 'x');
+		// we know that str contains 'length' non-punctuation characters
+		// consequently, as long as we did not substitute the 'x' in strSimpler by the non-punct char in str
+		// the loop must continue.
+		int i = 0;
+		while (strSimpler[i] != '\0') {
+			for (int j = 0; j < LENGTH; j++) {
+				if (!ispunct(str[j])) {
+					strSimpler[i] = str[j];
+					i++;
+				}
+			}
+		}
+		cout << strSimpler << endl;
+		return 0;
+	}
+	cout << str << endl;
+	return 0;
+}
