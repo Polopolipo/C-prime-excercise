@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+	vector<int> ivec;
+	int x = 0;
+	while (cin >> x) {
+		ivec.push_back(x);
+	}
+	return 0;
+}
