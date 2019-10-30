@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+int main()
+{
+	using std::string; using std::cin;
+	using std::endl; using std::cout;
+	
+	string str;
+	getline(cin, str);
+	if (!str.empty()) {
+		for (auto& c : str)
+			c = 'x';
+	}
+	cout << str << endl;
+}
