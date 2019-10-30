@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+int main()
+{
+	using std::string; using std::cin;
+	using std::endl; using std::cout;
+	
+	string str;
+	getline(cin, str);
+
+	if (!str.empty()) {
+		// method #1
+		for (char &c : str)
+			c = 'x';
+		cout << str << endl;
+
+		// method #2
+		for (int i = 0; str[i] != '\0'; i++) {
+			str[i] = 'y';
+		}
+		cout << str << endl;
+
+		// method #3
+		int j = 0;
+		while (str[j] != '\0') {
+			str[j] = 'k';
+			j++;
+		}
+		cout << str << endl;
+	}
+}
+
+
+// I prefer method #1 because it is faster (less lines of code) and simpler to type.
