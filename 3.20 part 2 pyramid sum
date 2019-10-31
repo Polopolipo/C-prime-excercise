@@ -1,0 +1,32 @@
+// program that prints the element of a vector in a pyramid way.
+// pyramid way : 0 + n, 1 + (n - 1), 2 + (n - 2) and so on...
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	vector<int> vint;
+	int x = 0;
+	while (cin >> x) {
+		vint.push_back(x);
+	}
+
+	auto len = vint.size();
+	if (len > 1) {
+		int sum = 0;
+		// If there is no middle number (ex: in 1 2 3, 2 is the middle number)
+		for (int i = 0; i < (len/2) ; i++) {
+			// if we hit the middle number.
+			if (i == (len - i - 1)) {
+				break;
+			}
+			else {
+				sum = vint[i] + vint[len - i - 1];
+				cout << sum << endl;
+			}
+		}
+	}
+}
