@@ -1,0 +1,37 @@
+// Program that ask the user to type a bunch of words and display them in "sentences"(lines) of n words.
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	vector<string> words;
+	string word;
+
+	cout << "To exit program, type 'Q' and hit Enter" << endl;
+	while (cin >> word) {
+		// Our way to end the loop
+		if (word == "Q") {
+			break;
+		}
+		// Transform word into uppercase
+		for (auto& i : word) {
+			i = toupper(i);
+		}
+		words.push_back(word);
+	}
+	cout << "\n" << endl;
+	// prints all the elements of words
+	auto len = words.size();
+	int n = 8; // n represents the maximum number of words contained by a line.
+	if (!words.empty()) {
+		for (unsigned i = 0; i < len; i++) {
+			cout << words[i] << " ";
+			if ((i+1) % n == 0) {
+				cout << endl;
+			}
+		}
+	}
+}
