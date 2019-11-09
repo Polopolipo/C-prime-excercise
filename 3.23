@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	vector<int> v1;
+	int max_size = 10;
+	int num = 0;
+
+	// adds 10 elements to the vector
+	while (max_size != 0) {
+		cin >> num;
+		v1.push_back(num*2);
+		--max_size;
+	}
+
+	// prints all the elements of the vector
+	auto start = v1.begin();
+	auto last = v1.end();
+	for (; start != last; ++start) {
+		++max_size;
+		cout << max_size << ". " << *start << endl;
+	}
+}
