@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	vector<int> v5(10, 42); // size 2
+	auto it5 = v5.begin();
+
+	int num = 1;
+	while (it5 != v5.end()) {
+		cout << num << "." << *it5 << endl;
+		++num;
+		++it5;
+	}
+}
