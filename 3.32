@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	constexpr size_t arr_size = 10;
+	int num[arr_size];
+	int numCopy[arr_size];
+
+	for (size_t i = 0; i < arr_size; i++) {
+		num[i] = i;
+		cout << num[i] << endl;
+	}
+	cout << "=========" << endl;
+
+	// Copying the array
+	for (size_t j = 0; j < arr_size; j++) {
+		numCopy[j] = num[j];
+		cout << numCopy[j] << endl;
+	}
+}
