@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	constexpr size_t arr_size = 10;
+	int num[arr_size];
+	for (size_t i = 0; i < arr_size; i++) {
+		num[i] = i;
+		cout << num[i] << endl;
+	}
+}
