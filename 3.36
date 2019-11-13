@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	constexpr size_t sz1 = 10;
+	constexpr size_t sz2 = 10;
+
+	int arr1[sz1] = {};
+	int arr2[sz2] = {};
+
+	// Two arrays are equal if 
+		// 1. They have the same length.
+		// 2. They have the same elements for every indexes.
+	auto length1 = end(arr1) - begin(arr1);
+	auto length2 = end(arr2) - begin(arr2);
+
+	if (length1 == length2) {
+		int* p1 = arr1;
+		int* p2 = arr2;
+
+		int i = 0;
+		while (i != length1 && *(p1 + i) == *(p2 + i)) {
+			++i;
+		}
+		if (i == length1) {
+			cout << "they are equal" << endl;
+		}
+		else {
+			cout << "they are NOT equal" << endl;
+		}
+	}
+	else {
+		cout << "they are NOT equal" << endl;
+	}
+}
