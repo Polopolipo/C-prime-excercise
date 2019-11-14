@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+
+using namespace std;
+
+int main()
+{
+	char a[] = "hello";
+	char b[] = "my name is david";
+
+	char c[100];
+	strcpy_s(c, 100, a);
+	strcat_s(c, 100, b);
+	cout << c << endl;
+}
