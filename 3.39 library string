@@ -1,0 +1,18 @@
+include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string a = "hello";
+	string b = "hello";
+
+	if (a == b) {
+		cout << "e q u a l" << endl;
+	}
+	else {
+		cout << "d i f f e r e n t" << endl;
+	}
+}
