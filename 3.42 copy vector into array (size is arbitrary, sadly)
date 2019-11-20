@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+
+using namespace std;
+
+int main()
+{
+	vector<int> v = { 1,1,1,2,3,4 };
+
+	int arr[100]; // can't get away with arbitrary size of the array. See below
+	// in C++, the dimension of an array is a constant (constexpr size_t) so it must be known at compile time.
+	int i = 0;
+	for (auto elem : v) {
+		arr[i] = elem;
+		cout << arr[i] << endl;
+		++i;
+	}
+
+
+}
